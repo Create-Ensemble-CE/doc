@@ -1,24 +1,23 @@
 ## How Fundraising Works
 
-1. Member creates a Project and create a Fundrasing based on that Project
+1. Member creates a Project and create a Fundraising based on that Project
    - 1 one fundraising campaign current active at a time for a user
    - maximum at X campaign annually
 2. Member Donor browses and chooses a project with fundraising options.
 3. The Donor enters the amount and selects a checkout-option or payment method.
-   - For a Public Visitor who wants to be anonymous, he can only use paypal or stripe since he doesn't have a wallet
-   - Even a Member can still choose paypal or strip
-   - If a Member does't choose to be anonymouse, he must login to proceed irrespective of payment option
-4. If the Donor chooses the wallet, he navigates to the wallet Transfer page with the follwoing field prefilled:
-    - WalletFrom: Donors wallet (which is readonly)
+   - For a Public Visitor who wants to be anonymous, he can only use payment gateways (PayPal, Stripe) since he doesn't have a wallet
+   - Even a Member can still choose 
+   - If a Member does't choose to be anonymous, he must login to proceed irrespective of payment option
+4. If the Donor chooses the wallet, he navigates to the wallet Transfer page with the following field pre-filled:
+    - WalletFrom: Donors wallet (which is read-only)
     - WalletTo: Fundraisers wallet (which is also read only in this case)
     - Amount: Must be greater than 1 dollar
     - Purpose (project title + Funding)
     - Enters his pin to confirm donation.
     - ProductType: Project Funding (Membership Subscription, Events Participation, Project Funding, Mentorship Subscription, Wallet Crediting)
     - ProductId: Project PK
-5. For thirdparty payment gateways (Stripe, Paypal), the user enters same info as above apart from wallet. It redirects to payment gateway interface.
+5. For 3rd payment gateways (Stripe, PayPal), the user enters same info as above apart from wallet. It redirects to payment gateway interface.
     - ProductType: Project Funding (Membership Subscription, Events Participation, Project Funding, Mentorship Subscription)
     - ProductId: Project PK
-6. When payment is successful, base on the intent (specified by ProductType and ProductId), the fundraising Member's wallet is credited. Meanwhile, in other cases, Membership subscription paln is upgraded, Event ticket is invoiced, Donation record for funding is created, mentorships is paid for and Wallet is credited.
-7. Users can withdraw cash from their wallet via Interated payment gateway e.g Paypal or simply spend from their wallets. Transfer fees are incured for any transaction.
-
+6. When payment is successful, base on the intent (specified by ProductType and ProductId), the fundraising Member's wallet is credited. Meanwhile, in other cases, Membership subscription plan is upgraded, Event ticket is invoiced, Donation record for funding is created, mentorships is paid for and Wallet is credited.
+7. Users can withdraw cash from their wallet via Integrated payment gateway e.g PayPal or simply spend from their wallets. Transfer fees are incurred for any transaction.
